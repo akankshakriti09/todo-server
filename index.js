@@ -8,7 +8,7 @@ const server = express();
 server.use(bodyParser.json());
 const port = process.env.PORT || 3600;
 
-// server.use(cors())
+server.use(cors())
 
 server.get("/", (req, res) => {
   res.send("HEllo wORld");
@@ -71,6 +71,7 @@ server.patch("/update-task", async (req, res) => {
     if (todo) {
       todo.update({
         name: req.body.name,
+        status:req.body.status
       });
       return res
         .status(200)
