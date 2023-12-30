@@ -137,5 +137,3 @@ server.post("/add-task", async (req, res) => {
 server.listen(port, () => {
   console.log(`Listening on: http://localhost:${port}`);
 });
-
-export default server
